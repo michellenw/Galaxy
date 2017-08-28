@@ -1,0 +1,90 @@
+
+	.image {
+		display: flex;
+  		flex-wrap: wrap;
+ 	 	justify-content: center;
+ 	 	position: absolute;
+ 		top: 50%;
+  		left: 50%;
+   	    margin-top: -200px; /* Half the height */
+ 		margin-left: -200px;
+	}
+	
+
+	@keyframes move-frontstars {
+    	from {background-position:0 0;}
+    	to {background-position:-10000px 5000px;}
+	}
+	@-webkit-keyframes move-frontstars {
+   		from {background-position:0 0;}
+    	to {background-position:-10000px 5000px;}
+	}
+	@-moz-keyframes move-frontstars {
+    	from {background-position:0 0;}
+    	to {background-position:-10000px 5000px;}
+	}
+	@-ms-keyframes move-frontstars {
+    	from {background-position:0 0;}
+    	to {background-position:-10000px 5000px;}
+	}
+	
+
+	@keyframes move-backstars {
+    	from {background-position:-10000px 5000px;}
+    	to {background-position:0 0;}
+	}
+	@-webkit-keyframes move-backstars {
+    	from {background-position:-10000px 5000px;}
+    	to {background-position:0 0;}
+	}
+	@-moz-keyframes move-backstars {
+    	from {background-position:-10000px 5000px;}
+    	to {background-position:0 0;}
+	}
+	@-ms-keyframes move-backstars {
+    	from {background-position:-10000px 5000px;}
+    	to {background-position:0 0;}
+	}
+
+
+	.backstars, .frontstars {
+  		position:absolute;
+  		top:0;
+  		left:0;
+  		right:0;
+  		bottom:0;
+  		width:100%;
+  		height:100%;
+  		display:block;
+	}
+
+
+	.backstars {
+	  	background:transparent url(http://i1064.photobucket.com/albums/u375/michellenicole17/stars22-2_zps5qzj06em.png) repeat top center;
+  		z-index:-1;
+  
+  		-moz-animation:move-backstars 200s linear infinite;
+  		-ms-animation:move-backstars 200s linear infinite;
+  		-o-animation:move-backstars 200s linear infinite;
+  		-webkit-animation:move-backstars 200s linear infinite;
+  		animation:move-backstars 200s linear infinite;
+	}
+
+
+	body {
+		z-index:0;
+		background-image: url('http://i1064.photobucket.com/albums/u375/michellenicole17/galaxy_zps7ao2vciq.jpg');
+   		background-color: #ffffff;
+	}
+	
+
+	.frontstars{
+  		background:transparent url(http://i1064.photobucket.com/albums/u375/michellenicole17/stars222_zps9tvu7wwd.png) repeat top center;
+  		z-index:1;
+
+  		-moz-animation:move-frontstars 200s linear infinite;
+  		-ms-animation:move-frontstars 200s linear infinite;
+  		-o-animation:move-frontstars 200s linear infinite;
+ 		 -webkit-animation:move-frontstars 200s linear infinite;
+  		animation:move-frontstars 200s linear infinite;
+	}
